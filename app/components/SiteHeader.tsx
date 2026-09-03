@@ -15,7 +15,7 @@ const NAV_ITEMS = [
 
 function HeaderArrow() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
       <path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
     </svg>
   );
@@ -28,7 +28,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Medivue home">
-        <Image src="/brand_logo/logo-no-trademark-landscape.png" alt="Medivue" width={164} height={47} preload />
+        <Image src="/brand_logo/logo-no-trademark-landscape.png" alt="Medivue" width={146} height={42} preload />
       </Link>
       <nav className={`site-nav ${menuOpen ? "is-open" : ""}`} aria-label="Main navigation">
         {NAV_ITEMS.map(([label, href]) => (

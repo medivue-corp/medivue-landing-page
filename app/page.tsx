@@ -72,7 +72,7 @@ const JOURNEY_STEPS = [
 
 function Arrow({ direction = "right" }: { direction?: "left" | "right" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
       <path
         d={direction === "right" ? "M5 12h14m-5-5 5 5-5 5" : "M19 12H5m5-5-5 5 5 5"}
         fill="none"
@@ -324,7 +324,7 @@ export default function Home() {
                   alt="Medivue live assessment application showing connected physiological signals"
                   width={1080}
                   height={2220}
-                  sizes="(max-width: 700px) 50vw, 280px"
+                  sizes="(max-width: 700px) 50vw, 250px"
                   quality={75}
                   preload
                 />
@@ -336,7 +336,7 @@ export default function Home() {
                   alt="Medivue multimodal sensing device attached to a smartphone"
                   width={368}
                   height={677}
-                  sizes="(max-width: 700px) 46vw, 260px"
+                  sizes="(max-width: 700px) 46vw, 230px"
                   quality={75}
                   preload
                   unoptimized
@@ -402,7 +402,7 @@ export default function Home() {
                           alt={`Medivue app — ${title}`}
                           width={1080}
                           height={2220}
-                          sizes="(max-width: 900px) 72vw, 330px"
+                          sizes="(max-width: 900px) 72vw, 290px"
                           quality={75}
                         />
                       </div>
@@ -603,7 +603,7 @@ export default function Home() {
 
       <footer className="footer">
         <div className="section-shell footer__inner">
-          <Image src="/brand_logo/logo-no-trademark-landscape.png" alt="Medivue" width={116} height={33} />
+          <Image src="/brand_logo/logo-no-trademark-landscape.png" alt="Medivue" width={104} height={30} />
           <p>Connected rapid emergency assessment.</p>
           <div><a href="/about">About us</a><a href="mailto:contact@medivue.com">Contact</a><span>© 2026 Medivue</span></div>
         </div>

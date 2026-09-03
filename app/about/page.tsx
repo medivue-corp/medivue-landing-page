@@ -3,27 +3,31 @@ import Link from "next/link";
 import ShaderBackground from "../components/ShaderBackground";
 import SiteHeader from "../components/SiteHeader";
 import ContactForm from "../components/ContactForm";
+import AboutAnimations from "../components/AboutAnimations";
 
 const TEAM = [
   {
     image: "/founders/elina.png",
     name: "Haider Elina Sakina",
-    role: "CEO & Co-Founder",
+    role: "Chief Executive Officer & Co-Founder",
     school: "School of Management, Beijing Institute of Technology",
+    objectPosition: "center top",
   },
   {
     image: "/founders/prima.png",
     name: "Prima Wijayakusuma",
     role: "Chief Research Officer & Co-Founder",
     school: "School of Integrated Circuits and Electronics, Beijing Institute of Technology",
+    objectPosition: "center 10%",
   },
   {
     image: "/founders/angeline.jpg",
     name: "Angeline Mary Marchella",
     role: "Chief Technology Officer & Co-Founder",
     school: "School of Computer Science and Technology, Beijing Institute of Technology",
+    objectPosition: "center top",
   },
-] as const;
+];
 
 export const metadata = {
   title: "About Medivue — A Continuous Thread for Emergency Care",
@@ -33,15 +37,16 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="about-page">
+      <AboutAnimations />
       <SiteHeader />
       <main>
         <section className="about-hero">
           <ShaderBackground className="about-hero__shader" />
           <div className="about-hero__wash" aria-hidden="true" />
           <div className="section-shell about-hero__inner">
-            <p className="eyebrow"><span className="about-hero__dot" /> About Medivue</p>
-            <h1>Built for the moments between first contact and definitive care.</h1>
-            <p>
+            <p className="eyebrow" data-reveal><span className="about-hero__dot" /> About Medivue</p>
+            <h1 data-reveal>Built for the moments between first contact and definitive care.</h1>
+            <p data-reveal>
               Medivue is creating a connected rapid assessment system so critical physiological
               context can move with the patient—from the scene to the hospital.
             </p>
@@ -51,11 +56,11 @@ export default function AboutPage() {
 
         <section className="about-story">
           <div className="section-shell about-story__grid">
-            <div>
+            <div data-reveal>
               <p className="eyebrow">Our story</p>
               <p className="section-index">01 / 03</p>
             </div>
-            <div className="about-story__copy">
+            <div className="about-story__copy" data-reveal>
               <h2>Emergency information should not disappear at every handoff.</h2>
               <p>
                 The earliest minutes of an emergency can produce valuable signals, observations,
@@ -75,17 +80,17 @@ export default function AboutPage() {
 
         <section className="about-purpose">
           <div className="section-shell">
-            <div className="about-purpose__heading">
+            <div className="about-purpose__heading" data-reveal>
               <div><p className="eyebrow eyebrow--light">Our purpose</p><p className="section-index">02 / 03</p></div>
               <h2>A clearer view of every critical minute.</h2>
             </div>
             <div className="about-purpose__cards">
-              <article>
+              <article data-reveal-card>
                 <span>VISION</span>
                 <h3>Critical context that travels with every patient.</h3>
                 <p>We envision emergency care where the right teams can see and understand the same evolving clinical picture, wherever the patient goes next.</p>
               </article>
-              <article>
+              <article data-reveal-card>
                 <span>MISSION</span>
                 <h3>Connect rapid assessment to a continuous care journey.</h3>
                 <p>Our mission is to help authorized responders capture multimodal physiological signals, surface meaningful context, and hand it forward securely and clearly.</p>
@@ -96,15 +101,15 @@ export default function AboutPage() {
 
         <section className="about-team">
           <div className="section-shell">
-            <div className="about-team__heading">
+            <div className="about-team__heading" data-reveal>
               <div><p className="eyebrow">The team</p><p className="section-index">03 / 03</p></div>
               <div><h2>Three disciplines.<br />One shared responsibility.</h2><p>Built in Beijing by a multidisciplinary founding team focused on the continuity, clarity, and usability of emergency information.</p></div>
             </div>
             <div className="team-grid">
-              {TEAM.map((member, index) => (
-                <article key={member.name}>
+              {TEAM.map((member) => (
+                <article key={member.name} data-reveal-card>
                   <div className="team-card__portrait">
-                    <Image src={member.image} alt={`${member.name}, ${member.role}`} fill sizes="(max-width: 900px) 92vw, 31vw" quality={75} loading="eager" />
+                    <Image src={member.image} alt={`${member.name}, ${member.role}`} fill sizes="(max-width: 900px) 92vw, 31vw" quality={75} loading="eager" style={{ objectPosition: member.objectPosition }} />
                   </div>
                   <div className="team-card__copy"><h3>{member.name}</h3><p className="team-card__role">{member.role}</p><p className="team-card__school">{member.school}</p></div>
                 </article>
@@ -115,9 +120,11 @@ export default function AboutPage() {
 
         <section className="about-closing">
           <div className="section-shell">
-            <p className="eyebrow">The work ahead</p>
-            <h2>We are building carefully, with the people who understand emergency care.</h2>
-            <ContactForm />
+            <p className="eyebrow" data-reveal>The work ahead</p>
+            <h2 data-reveal>We are building carefully, with the people who understand emergency care.</h2>
+            <div data-reveal>
+              <ContactForm />
+            </div>
           </div>
         </section>
       </main>
