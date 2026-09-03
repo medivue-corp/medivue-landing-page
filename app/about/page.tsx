@@ -16,7 +16,7 @@ const TEAM = [
   {
     image: "/founders/prima.png",
     name: "Prima Wijayakusuma",
-    role: "Chief Research Officer & Co-Founder",
+    role: "Chief Innovation Officer & Co-Founder",
     school: "School of Integrated Circuits and Electronics, Beijing Institute of Technology",
     objectPosition: "center 10%",
   },
