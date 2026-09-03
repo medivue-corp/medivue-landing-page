@@ -8,7 +8,7 @@ import AboutAnimations from "../components/AboutAnimations";
 const TEAM = [
   {
     image: "/founders/elina.png",
-    name: "Haider Elina Sakina",
+    name: "Elina Sakina Haider",
     role: "Chief Executive Officer & Co-Founder",
     school: "School of Management, Beijing Institute of Technology",
     objectPosition: "center top",
