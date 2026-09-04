@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import continuousHandoff from "../public/generated/continuous-handoff.png";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -471,7 +472,7 @@ export default function Home() {
               ))}
             </div>
             <figure className="workflow__media" data-reveal>
-              <Image src="/generated/continuous-handoff.png" alt="An ambulance team handing a continuous Medivue assessment to a hospital clinician" width={1536} height={1024} sizes="(max-width: 700px) 100vw, 1320px" quality={75} />
+              <Image src={continuousHandoff} alt="A doctor handing the standalone Medivue device to a paramedic while holding a phone displaying the Medivue app, with a patient on a stretcher in the background" width={1536} height={1024} sizes="(max-width: 700px) 100vw, 1320px" quality={75} />
               <figcaption>Same patient. Same record. A better-prepared receiving team.</figcaption>
             </figure>
           </div>

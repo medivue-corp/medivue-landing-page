@@ -4,6 +4,7 @@ import ShaderBackground from "../components/ShaderBackground";
 import SiteHeader from "../components/SiteHeader";
 import ContactForm from "../components/ContactForm";
 import AboutAnimations from "../components/AboutAnimations";
+import CurrentStage from "../components/CurrentStage";
 
 const TEAM = [
   {
@@ -58,7 +59,7 @@ export default function AboutPage() {
           <div className="section-shell about-story__grid">
             <div data-reveal>
               <p className="eyebrow">Our story</p>
-              <p className="section-index">01 / 03</p>
+              <p className="section-index">01 / 04</p>
             </div>
             <div className="about-story__copy" data-reveal>
               <h2>Emergency information should not disappear at every handoff.</h2>
@@ -81,7 +82,7 @@ export default function AboutPage() {
         <section className="about-purpose">
           <div className="section-shell">
             <div className="about-purpose__heading" data-reveal>
-              <div><p className="eyebrow eyebrow--light">Our purpose</p><p className="section-index">02 / 03</p></div>
+              <div><p className="eyebrow eyebrow--light">Our purpose</p><p className="section-index">02 / 04</p></div>
               <h2>A clearer view of every critical minute.</h2>
             </div>
             <div className="about-purpose__cards">
@@ -99,10 +100,12 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <CurrentStage />
+
         <section className="about-team">
           <div className="section-shell">
             <div className="about-team__heading" data-reveal>
-              <div><p className="eyebrow">The team</p><p className="section-index">03 / 03</p></div>
+              <div><p className="eyebrow">The team</p><p className="section-index">04 / 04</p></div>
               <div><h2>Three disciplines.<br />One shared responsibility.</h2><p>Built in Beijing by a multidisciplinary founding team focused on the continuity, clarity, and usability of emergency information.</p></div>
             </div>
             <div className="team-grid">
@@ -118,7 +121,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="about-closing">
+        <section className="about-closing" id="about-contact" style={{ scrollMarginTop: 110 }}>
           <div className="section-shell">
             <p className="eyebrow" data-reveal>The work ahead</p>
             <h2 data-reveal>We are building carefully, with the people who understand emergency care.</h2>
