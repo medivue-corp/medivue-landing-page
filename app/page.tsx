@@ -584,7 +584,7 @@ export default function Home() {
               <p className="lead">We work alongside healthcare and technology partners to make emergency information more continuous, usable, and timely.</p>
               <div className="partner-logos">
                 <Image src="/partners_logo/nova_logo.png?v=20260903" alt="NOVA" width={180} height={68} unoptimized />
-                <Image src="/partners_logo/emchealthcare_logo.png" alt="EMC Healthcare" width={180} height={68} />
+                <Image src="/partners_logo/bit_logo.png" alt="Beijing Institute of Technology" width={180} height={68} />
                 <Image src="/partners_logo/equiralife_logo.png" alt="Equiralife" width={180} height={68} />
               </div>
             </div>
